@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-5.0%2B-brightgreen" alt="Android">
-  <img src="https://img.shields.io/badge/version-1.8.90-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.8.91-blue" alt="Version">
   <img src="https://img.shields.io/badge/arch-arm64--v8a%20%7C%20armeabi--v7a%20%7C%20x86%20%7C%20x86__64-orange" alt="Arch">
 </p>
 
@@ -120,6 +120,21 @@
 ---
 
 ## 更新日志
+
+### v1.8.91（2026-07-14）
+
+#### 功能改进
+- **性能全面优化** — 彻底清理冗余调试日志，大幅提升应用整体流畅度
+- **DSD 播放体验升级** — 优化 DSD 文件加载速度，播放启动更迅速
+- **空间音频兼容性增强** — 进一步优化全系耳机头部追踪检测准确性
+- **评论页面体验优化** — 修复评论页面返回问题，提升列表滚动流畅度
+- **稳定性提升** — 修复多个潜在崩溃点，增强应用运行稳定性
+
+#### 文档更新
+- 使用说明书更新至 v1.8.91
+- 常见问题（FAQ）文档更新
+
+---
 
 ### v1.8.90（2026-07-10）
 
