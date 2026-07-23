@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-5.0%2B-brightgreen" alt="Android">
-  <img src="https://img.shields.io/badge/version-1.8.93-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.8.95-blue" alt="Version">
   <img src="https://img.shields.io/badge/arch-arm64--v8a%20%7C%20armeabi--v7a%20%7C%20x86%20%7C%20x86__64-orange" alt="Arch">
 </p>
 
@@ -121,6 +121,25 @@
 ---
 
 ## 更新日志
+
+### v1.8.95（2026-07-23）
+
+#### 新增功能
+- **回放增益（ReplayGain）** — 基于 EBU R128 标准自动统一不同歌曲的感知响度，首次播放时自动分析响度并缓存结果，消除手动调音量的需要
+- **有声书识别** — 自动检测本地音乐中的有声书文件，支持封面/数字列表切换、排序筛选、手动标记添加
+- **A-B 复读** — 支持设置 A/B 点标记实现区间循环播放，适用于语言学习场景
+
+#### 功能改进
+- **歌单歌曲工具栏** — 修复歌单歌曲 Tab 工具栏行不显示的问题，临时列表也支持排序、关键词筛选、列表模式切换
+- **本地音乐 UI 优化** — 全部歌曲数量移至检测按钮右侧，删除重复标签数量
+
+#### 问题修复
+- **抽屉弹出修复** — 修复 TagList 组件和导航菜单抽屉无法弹出的问题
+- **音效杂音修复** — 修复拖动进度条和切换音效时的杂音问题
+- **进度条闪退修复** — 修复拖动进度条时应用闪退的线程安全问题
+- **A-B 文字颜色** — 修复 A-B 复读激活后文字颜色与背景重合导致不可见的问题
+
+---
 
 ### v1.8.93（2026-07-23）
 
