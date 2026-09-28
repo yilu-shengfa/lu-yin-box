@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-8.0%2B-brightgreen" alt="Android">
-  <img src="https://img.shields.io/badge/version-2.0.03-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-2.0.07-blue" alt="Version">
   <img src="https://img.shields.io/badge/arch-arm64--v8a%20%7C%20armeabi--v7a%20%7C%20x86%20%7C%20x86__64-orange" alt="Arch">
 </p>
 
@@ -27,7 +27,7 @@
 | **lx-music-mobile** | lyswhut | https://github.com/lyswhut/lx-music-mobile |
 | **lx-netease-music-mobile** | Toskysun | https://github.com/Toskysun/lx-netease-music-mobile |
 
-感谢 **lyswhut**(落雪音乐)创造了如此优秀的开源播放器框架,也感谢 **Toskysun** 在音源对接方面提供的参考实现。正是这些开源项目让鹿音盒的诞生成为可能。
+感谢 **lyswhut**(落雪音乐)创造了如此优秀的开源播放器框架,也感谢 **Toskysun** 在播放器功能实现方面提供的参考。正是这些开源项目让鹿音盒的诞生成为可能。
 
 ---
 
