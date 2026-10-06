@@ -4,12 +4,25 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-8.0%2B-brightgreen" alt="Android">
-  <img src="https://img.shields.io/badge/version-2.0.07-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-2.0.08-blue" alt="Version">
   <img src="https://img.shields.io/badge/arch-arm64--v8a%20%7C%20armeabi--v7a%20%7C%20x86%20%7C%20x86__64-orange" alt="Arch">
 </p>
 
 ---
 唯一官方团队发布页https://luyinbox.netlify.app
+
+### 发布页自动同步
+
+发布页每 2 小时检查一次 `yilu-shengfa/lu-yin-box` 的最新正式 GitHub Release，每天共 12 次。检测到更新后，自动同步版本号、各架构 APK 下载链接和文件大小，保留原有网页设计，不同步仓库文件或下载 APK 到本站。
+
+同步结果存储在 Netlify Database，访客通过本站只读接口获取信息，不会因访问网站而增加 GitHub 检查次数。相同版本的安装包更新也会被检查；GitHub 请求失败或返回无效版本时保留上次成功的数据。新版缺少某架构安装包时，对应下载入口显示不可用，不会混用旧版本安装包。
+
+定时任务 `sync-github-release` 使用 `0 */2 * * *`，在 UTC 偶数小时整点执行（北京时间也是偶数小时整点），每天检查 12 次。另有 `initialize-release` 在正式发布部署成功后立即同步一次，不再等待下一个定时检查点；预览部署和未发布的生产部署不触发该初始化。首次成功同步前和接口不可用时，页面保留已核实的静态下载信息，并提供 GitHub 历史版本入口；旧缓存不会覆盖页面中发布时间更新的版本。可在 Netlify 的 Functions 页面选择定时任务，使用 **Run now** 手动重试或查看执行日志。
+
+如果线上仍显示旧版，先检查网页是否包含 `assets/latest-release.js`、该脚本是否返回 200，以及 `/api/latest-release` 是否返回版本数据。网页缺少脚本且接口返回 404 表示线上尚未提供这套同步功能，不能视为定时任务已经生效。同步失败日志区分数据库读取、GitHub 检查和数据库写入阶段，且不输出凭据或原始数据库错误。
+
+数据库迁移位于 `netlify/database/migrations/`，由 Netlify 在部署时自动应用。修改 `db/schema.ts` 后使用 `npx drizzle-kit generate --name <变更名称>` 生成迁移；可使用 `npm run typecheck` 检查 TypeScript。
+
 ## 简介
 
 鹿音盒是一款功能丰富的 Android 音乐播放器应用,提供高品质音乐播放、精美歌词显示、专业级音效调节、本地音乐管理、有声书离线下载、MV 在线播放、局域网资源访问等全方位音频体验。
