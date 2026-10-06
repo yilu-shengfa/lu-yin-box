@@ -222,6 +222,9 @@
       text-underline-offset: 4px;
     }
 
+    .sync-status { margin: 12px 0 0; color: #8f9e90; font-size: 11px; line-height: 1.8; }
+    a[aria-disabled="true"] { opacity: .5; pointer-events: none; }
+
     .note {
       grid-column: 1 / -1;
       display: grid;
@@ -269,7 +272,7 @@
         </span>
         鹿音盒
       </div>
-      <span class="version">V 2.0.07</span>
+      <span class="version" data-release-published-at="2026-10-02T13:54:49Z">V 2.0.08</span>
     </header>
 
     <main>
@@ -287,8 +290,8 @@
       <aside class="download-panel" aria-labelledby="download-title">
         <p class="panel-label">推荐版本</p>
         <h2 id="download-title">主流安卓设备</h2>
-        <p class="size">arm64-v8a · 45.8 MB · APK</p>
-        <a class="primary-download" href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.07/LuYin.Music.Box-v2.0.07-arm64-v8a.apk">
+        <p class="size">arm64-v8a · 45.9 MB · APK</p>
+        <a class="primary-download" data-architecture="arm64-v8a" href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.08/LuYin.Music.Box-v2.0.08-arm64-v8a.apk">
           <span>下载 APK</span>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v12m0 0 5-5m-5 5-5-5M5 20h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -296,12 +299,13 @@
         <div class="alternatives">
           <p>设备架构不同？选择对应安装包</p>
           <div class="arch-list">
-            <a href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.07/LuYin.Music.Box-v2.0.07-armeabi-v7a.apk"><span>armeabi-v7a</span><small>旧款 32 位设备 · 38.7 MB</small></a>
-            <a href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.07/LuYin.Music.Box-v2.0.07-x86_64.apk"><span>x86_64</span><small>64 位模拟器 · 40.5 MB</small></a>
-            <a href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.07/LuYin.Music.Box-v2.0.07-x86.apk"><span>x86</span><small>32 位模拟器 · 40.4 MB</small></a>
+            <a data-architecture="armeabi-v7a" href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.08/LuYin.Music.Box-v2.0.08-armeabi-v7a.apk"><span>armeabi-v7a</span><small>旧款 32 位设备 · 38.9 MB</small></a>
+            <a data-architecture="x86_64" href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.08/LuYin.Music.Box-v2.0.08-x86_64.apk"><span>x86_64</span><small>64 位模拟器 · 40.7 MB</small></a>
+            <a data-architecture="x86" href="https://github.com/yilu-shengfa/lu-yin-box/releases/download/v2.0.08/LuYin.Music.Box-v2.0.08-x86.apk"><span>x86</span><small>32 位模拟器 · 40.6 MB</small></a>
           </div>
         </div>
         <a class="release-link" href="https://github.com/yilu-shengfa/lu-yin-box/releases" target="_blank" rel="noopener noreferrer">查看全部历史版本 ↗</a>
+        <p class="sync-status" id="sync-status" role="status">每 2 小时自动检查更新，每天 12 次</p>
       </aside>
 
       <div class="note">
@@ -310,5 +314,6 @@
       </div>
     </main>
   </div>
+  <script src="/assets/latest-release.js" defer></script>
 </body>
 </html>
