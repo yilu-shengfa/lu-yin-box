@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-8.0%2B-brightgreen" alt="Android">
-  <img src="https://img.shields.io/badge/version-2.0.08-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-2.0.09-blue" alt="Version">
   <img src="https://img.shields.io/badge/arch-arm64--v8a%20%7C%20armeabi--v7a%20%7C%20x86%20%7C%20x86__64-orange" alt="Arch">
 </p>
 
