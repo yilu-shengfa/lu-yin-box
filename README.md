@@ -9,7 +9,7 @@
 </p>
 
 ---
-唯一官方团队发布页https://luyinbox.netlify.app  (版本以此GitHub为准）
+
 
 
 
